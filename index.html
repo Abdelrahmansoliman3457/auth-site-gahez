@@ -125,12 +125,11 @@
             <form action="https://abdelrahmansoliman3457.github.io/gahez-dashboard/">
               <div class="main-input-cont mb-3 mt-4 ">
                 <input type="text" id="number-country" hidden value="" />
-                <h6 class="mb-2 font14">رقم الجوال</h6>
+                <h6 class="mb-2 font14">رقم الجوال / البريد الالكتروني</h6>
                 <input
-                  type="tel"
-                  id="telephone"
+                  type="text"
                   class="main-input"
-                  placeholder="برجاء ادخال رقم الجوال"
+                  placeholder="برجاء ادخال رقم الجوال / البريد الالكتروني"
                 />
               </div>
               <div class="main-input-cont mb-2 mt-4">
@@ -182,23 +181,7 @@
     <script>
       new WOW().init();
     </script>
-    <!--call iti-->
-    <script>
-      var input = document.querySelector("#telephone");
-      let iti = window.intlTelInput(input, {
-        autoPlaceholder: "ادخل",
-        customPlaceholder: "kggg",
-        initialCountry: "sa",
-        separateDialCode: true,
-      });
 
-      $("#number-country").val(iti.getSelectedCountryData().dialCode);
-
-      input.addEventListener("countrychange", function () {
-        $("#number-country").val(iti.getSelectedCountryData().dialCode);
-        console.log(iti.getSelectedCountryData().dialCode);
-      });
-    </script>
     <!-- PassWord Show and hide -->
     <script>
       const iconsPassSet = document.querySelectorAll(".check-setting-ic");
